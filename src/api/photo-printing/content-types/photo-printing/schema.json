@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_printings",
+  "info": {
+    "singularName": "photo-printing",
+    "pluralName": "photo-printings",
+    "displayName": "PhotoPrinting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "mainImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "otherImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "preDescription": {
+      "type": "richtext"
+    },
+    "article": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "photo_printings"
+    },
+    "metaKeys": {
+      "type": "text",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

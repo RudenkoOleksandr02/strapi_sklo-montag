@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "doors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::door.door",
+      "mappedBy": "category"
+    },
+    "showers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shower.shower",
+      "mappedBy": "category"
+    },
+    "mirrors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mirror.mirror",
+      "mappedBy": "category"
+    },
+    "shelves": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shelf.shelf",
+      "mappedBy": "category"
+    },
+    "photo_printings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photo-printing.photo-printing",
+      "mappedBy": "category"
+    },
+    "railings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::railing.railing",
+      "mappedBy": "category"
+    },
+    "partitions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partition.partition",
+      "mappedBy": "category"
+    }
+  }
+}
