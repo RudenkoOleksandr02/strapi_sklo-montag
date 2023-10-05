@@ -24,10 +24,6 @@
       "type": "string",
       "required": true
     },
-    "article": {
-      "type": "biginteger",
-      "required": true
-    },
     "price": {
       "type": "biginteger",
       "required": true
@@ -39,6 +35,10 @@
       "type": "boolean",
       "required": true,
       "default": true
+    },
+    "article": {
+      "type": "string",
+      "required": true
     }
   }
 }
