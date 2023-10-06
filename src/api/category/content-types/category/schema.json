@@ -56,6 +56,12 @@
       "relation": "oneToMany",
       "target": "api::partition.partition",
       "mappedBy": "category"
+    },
+    "furniture_sealers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::furniture-sealer.furniture-sealer",
+      "mappedBy": "furniture_category"
     }
   }
 }
