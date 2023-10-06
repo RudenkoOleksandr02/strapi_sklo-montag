@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "barbells",
+  "info": {
+    "singularName": "barbell",
+    "pluralName": "barbells",
+    "displayName": "FurnitureBarbell",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "article": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "inStock": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "furniture_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::furniture-category.furniture-category",
+      "inversedBy": "furniture_barbells"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "furniture_profiles",
+  "info": {
+    "singularName": "furniture-profile",
+    "pluralName": "furniture-profiles",
+    "displayName": "FurnitureProfile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "article": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "inStock": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "furniture_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::furniture-category.furniture-category",
+      "inversedBy": "furniture_profiles"
+    }
+  }
+}
