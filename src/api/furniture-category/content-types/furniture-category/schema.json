@@ -63,6 +63,18 @@
       "relation": "oneToMany",
       "target": "api::furniture-profile.furniture-profile",
       "mappedBy": "furniture_category"
+    },
+    "furniture_pendulum_systems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::furniture-pendulum-system.furniture-pendulum-system",
+      "mappedBy": "furniture_category"
+    },
+    "furniture_shelf_mounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::furniture-shelf-mount.furniture-shelf-mount",
+      "mappedBy": "furniture_category"
     }
   }
 }
